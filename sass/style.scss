@@ -130,3 +130,28 @@ strong, .section-title, .post-title {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Tags */
+.tag-size-1 {
+  color: blue;
+  font-size: 100%;
+}
+.tag-size-2 {
+  color: orange;
+  font-size: 120%;
+}
+.tag-size-3 {
+  color: red;
+  font-size: 140%;
+}
+.tag-size-4 {
+  color: green;
+  font-size: 160%;
+}
+.tag-size-5 {
+  color: black;
+  font-size: 180%;
+}
+a.tag-size-1, a.tag-size-2, a.tag-size-3, a.tag-size-4, a.tag-size-5 {
+  text-decoration-line: none;
+}
