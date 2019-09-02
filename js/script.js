@@ -65,7 +65,7 @@
 
   addClickListenersToLinks();
 
-  const calculateTagsParams = function(tags) {
+  const calculateParams = function(tags) {
     const params = {
       max: 0,
       min: 999999
@@ -111,7 +111,7 @@
       titleList.innerHTML = html;
     }
     const tagList = document.querySelector('.tags');
-    const tagsParams = calculateTagsParams(allTags);
+    const tagsParams = calculateParams(allTags);
     const allTagsData = {tags: []};
     for(let tag in allTags) {
       allTagsData.tags.push({
@@ -160,22 +160,6 @@
 
   addClickListenersToSidebarTags();
 
-  const calculateAuthorsParams = function(tags) {
-    const params = {
-      max: 0,
-      min: 999999
-    };
-    for(let tag in tags) {
-      if(tags[tag] > params.max) {
-        params.max = tags[tag];
-      }
-      if(tags[tag] < params.min) {
-        params.min = tags[tag];
-      }
-    }
-    return params;
-  };
-
 
   const calculateAuthorsClass = function(count,params) {
     const normalizedCount = count - params.min;
@@ -204,7 +188,7 @@
       authorList.innerHTML = html;
     }
     const tagList = document.querySelector('.authors');
-    const authorsParams = calculateAuthorsParams(allTags);
+    const authorsParams = calculateParams(allTags);
     const allAutorsData = {tags: []};
     for(let tag in allTags) {
       allAutorsData.tags.push({
